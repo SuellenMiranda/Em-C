@@ -1,0 +1,4 @@
+a) a) p == &i  => p = memória i logo  p = 3 
+b) *p-*q => 3-5 => -2
+c) (*p)*(*q) => 3*5 => 15 diferente de (*p)*(q)==20 logo é falsa
+d) 10* -3/5+7 => -30/5+7 => -6+7 => 1

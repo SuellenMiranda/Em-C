@@ -1,0 +1,36 @@
+int main(void) {
+  int limite_inf, limite_sup, total_p = 0, total_i = 0;
+
+  //Entrada de Dados
+  leitura(&limite_inf, &limite_sup);
+
+  //Processamento de Dados
+  conta_pi(limite_inf, limite_sup, &total_p, &total_i);
+
+  //Saída de Dados
+  mostra_dados(total_p, total_i);
+
+  return 0;
+}
+
+void leitura(int *pli, int *pls) {
+
+  int troca = 0;
+
+  printf("Escreva o limite inferior e o superior de um intervalo de números que deseje: ");
+  scanf("%i%i", pli, pls);
+
+}
+
+void conta_pi(int li, int ls, int *pcp, int *pci) {
+
+  for (int i = li; i <= ls; i++)
+       if (i % 2 == 0)
+         (*pcp)++; //ou *pcp = *pcp + 1;
+       else
+         (*pci)++;
+}
+
+void mostra_dados(int qp, int qi) {
+  printf("Número de pares no intervalo: %i, \tNúmero de Ímpares no intervalo: %i", qp, qi);
+}

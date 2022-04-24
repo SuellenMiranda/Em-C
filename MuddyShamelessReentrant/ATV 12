@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdio.h>
+
+
+void leitura(int *num1, int *num2, int *num3);
+
+
+void ordena(int n1, int n2, int n3, int *pri, int *seg, int *ter);
+
+ 
+void mostra_dados(int p, int s, int t);
+
+
+ 
+
+int main(void) {
+   
+   int numero1, numero2, numero3, primeiro, segundo, terceiro;
+
+   leitura(&numero1, &numero2, &numero3);
+
+   ordena(numero1, numero2, numero3, &primeiro, &segundo, &terceiro);
+
+   mostra_dados(primeiro, segundo, terceiro);
+}
+
+
+
+
+
+void leitura(int *num1, int *num2, int *num3){
+    
+    printf("Digite três números inteiros: ");
+    scanf("%i%i%i", num1, num2, num3);
+}
+
+
+void ordena(int n1, int n2, int n3, int *pri, int *seg, int *ter){
+
+  if (n1 <= n2 && n2 <= n3)
+  {
+      *pri = n1, *seg = n2, *ter = n3;
+  }
+  else if (n1 <= n3 && n3 <= n2)
+  {
+      *pri = n1, *seg = n3, *ter = n2;
+  }
+  else if (n2 <= n1 && n1 <= n3)
+  {
+      *pri = n2, *seg = n1, *ter = n3;
+  }
+  else if (n2 <= n3 && n3 <= n1) 
+  {
+      *pri = n2, *seg = n3, *ter = n1;
+  }
+  else if (n3 <= n1 && n1 <= n2) 
+  {
+      *pri = n3, *seg = n1, *ter = n2;
+  }
+  else 
+  {
+      *pri = n3, *seg = n2, *ter = n1;
+  }
+   
+}
+
+
+void mostra_dados(int p, int s, int t){
+
+  printf("Sequência em ordem crescente: %i, %i, %i", p, s, t);
+}
