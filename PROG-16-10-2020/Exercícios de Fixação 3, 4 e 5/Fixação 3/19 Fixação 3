@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float a, b, c, X;
+
+int main(){
+
+printf("Digite os valores reais de a b c.\n");
+scanf("%f%f%f",&a ,&b ,&c);
+
+X = ((a + (2 * b + c) * c)/ a * a);
+
+printf("X = %.2f", X);
+	return 0;
+}

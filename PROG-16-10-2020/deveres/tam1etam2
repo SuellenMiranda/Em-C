@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM1 20
+#define TAM2 30
+
+int vet_a[TAM1], vet_b[TAM2], vet_c[TAM1+TAM2];
+int i;
+
+int main(){
+
+for(i=0;i<TAM1;i++){
+  scanf("%i", &vet_a[i]);
+}
+
+for(i=0;i<TAM2;i++){
+  scanf("%i", &vet_a[i]);
+}
+
+for(i=0;i<TAM1;i++)
+  vet_c[i] = vet_a[i];
+
+for(i=0;i<TAM2;i++)
+  vet_c[i+2] = vet_b[i];
+
+for(i=0;i < TAM1+TAM2;i++){
+printf("%i,", vet_c[TAM1+TAM2]);
+}
+
+}

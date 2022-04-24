@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float peso, peso2;
+
+int main(){
+  
+printf("Digite seu peso em gramas.\n");
+scanf("%f", &peso);
+
+peso2 = peso + (peso * 0.07);
+
+printf("Se a pessoa tiver %.2f g e ela engordar mais 7 porcento ela tera %.2f", peso, peso2);
+
+	return 0;
+}

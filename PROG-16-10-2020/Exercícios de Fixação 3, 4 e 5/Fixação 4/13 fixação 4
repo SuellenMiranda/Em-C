@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float salario, desconto, salariototal;
+
+int main(){
+
+printf("Digite seu salario\n");
+scanf("%f", &salario);
+
+if(salario < 1000){
+  desconto = salario * 0.05;
+  salariototal = salario - desconto;
+}
+if(salario >= 1000 && salario <= 2000){
+  desconto = salario * 0.1;
+  salariototal = salario - desconto;
+}
+if(salario > 2000){
+  desconto = salario * 0.15;
+  salariototal = salario - desconto;
+}
+
+printf("Salario = %.2f e desconto = %.2f", salariototal, desconto);
+
+	return 0;
+}
+

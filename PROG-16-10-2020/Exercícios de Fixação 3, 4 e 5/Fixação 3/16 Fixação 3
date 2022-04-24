@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float salario, imposto;
+
+int main(){
+  
+  printf("Digite o salario");
+  scanf("%f", &salario);
+  
+imposto = salario * 0.05;
+
+printf("O salario e igual a %.2f\n", salario);
+
+printf("Imposto e igual a %.2f", imposto);
+
+	return 0;
+}
