@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  const int nt=50;
+  int k;
+  float S=0;
+
+ //Não temos entrada de dados...
+ //Processamento de Dados:
+  for (k=1; k<=50; k++)
+    S += (2.0 * k-1)/k;
+
+ //Saída de Dados:
+  printf("\n\n\tSomatório = %.10f", S);
+
+  return 0;
+}

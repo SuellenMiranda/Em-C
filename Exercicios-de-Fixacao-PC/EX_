@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int calc_fat( int n ); //protótipo da Função
+
+int main ()
+{
+  int num, fat;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite um número inteiro >=0: ");
+  scanf("%d", &num);
+
+ //Processamento de Dados:
+  fat = calc_fat(num);
+
+ //Saída de Dados:
+  printf("\n\n\t%d ! = %d\n\n\n", num, fat);
+
+  return 0;
+}
+
+int calc_fat( int n )
+
+{
+  int i, f=1;
+
+  for(i=2;i<=n;i++)
+  {
+    f *= i;
+  }
+
+  return (f);
+}
+
+

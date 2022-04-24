@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+const int tam_str = 40;
+int i;
+
+
+void le_frase(char *l)
+{
+  printf("\n\n\tEscreva uma frase de no máximo %i caracteres: ", tam_str);
+  scanf(" %40[^\n]", l);
+}
+
+void muda_letras(char m[tam_str])
+{
+int tamanho = strlen(m);
+
+  for(i = 0; i < tamanho; i++)
+  {
+
+    m[i] = toupper(m[i]);
+  } 
+  printf("\n\n\tA frase escrita com letras maiúsculas: %s", m);
+}
+
+
+int main() 
+{
+   
+char frase[tam_str];
+
+  le_frase(frase);
+  muda_letras(frase);
+}

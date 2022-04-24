@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int i, num;
+
+
+  //Entrada de Dados
+  printf("\n\n\tDigite um número para tabuada:");
+  scanf("%i", &num);
+
+  //Processamento e Saída de Dados
+  printf("\n\n\tTabuada de multiplicação do número %i:", num);
+  for(i=1;i<=10;i++)
+    printf("\n\t%3i * %3i = %3i", num, i, num*i);
+
+return 0;
+}
+

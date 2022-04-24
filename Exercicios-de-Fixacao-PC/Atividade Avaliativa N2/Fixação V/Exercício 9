@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+int Escolha;
+float num1, num2, result;
+
+ //Entrada de Dados:
+  printf("\n\n\tescolha uma das opções:\n\t1-Soma;\n\t2-Multiplicação;\n\t3-Finalizar;\n\t ");
+  scanf("%i", &Escolha);
+
+ //Processamento e Saída de Dados:
+  if(Escolha == 1)
+   {
+     printf("\n\tDigite dois números que gostaria de somar: ");
+     scanf("%f%f", &num1, &num2);
+     result = num1 + num2;
+     printf("\n\n\tO resultado da soma de %.1f + %.1f = %.1f", num1, num2, result);
+   }
+  else
+   if(Escolha == 2)
+    {
+      printf("\n\tDigite dois números que gostaria de multiplicar: ");
+      scanf("%f%f", &num1, &num2);
+      result = num1 * num2;
+      printf("\n\n\tO resultado da multiplicação de %.1f * %.1f = %.1f", num1, num2, result);
+    }
+   else
+    if(Escolha == 3)
+    
+return 0;
+
+}

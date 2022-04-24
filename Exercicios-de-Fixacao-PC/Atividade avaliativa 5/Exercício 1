@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+const int tam_str = 81; 
+int i;
+
+void le_frase( char *f)
+{
+  printf("\n\n\tEscreva uma frase com no máximo %i caracteres:\n ", tam_str);
+  scanf(" %80[^\n]", f);
+}
+
+int tamanho(char *f)
+{
+int n = 0;
+
+  for(i = 0; f[i] != '\0'; i++)
+  {
+      n++;
+  }
+
+return n;
+}
+
+int conta_cp( char *f)
+{
+int cont = 0; 
+
+  for(i = 0; f[i] != '\0'; i++)
+  {
+     switch(f[i])
+     {
+       case '.' : case ',' : case '?' : case '!' : cont++;
+     }
+  }
+return cont;
+}
+
+int conta_cn( char *f)
+{
+int cont1 = 0; 
+
+  for(i = 0; f[i] != '\0'; i++)
+  {
+     switch(f[i])
+     {
+       case '0': case '1' : case '2' : case '3' : case '4' : case '5' : case '6' : case '7' : case '8' : case '9' : cont1++;
+     }
+  }
+return cont1;
+}
+
+int conta_eb( char *f)
+{
+int cont2 = 0; 
+
+  for(i = 0; f[i] != '\0'; i++)
+  {
+    switch(f[i])
+    {
+    case ' ' : cont2++;
+    }
+  }
+return cont2;
+}
+
+void saida( char *f, int comp, int tcp, int tcn, int teb)
+{
+  printf("\nA frase: '%s', possui %i caracteres de pontuação, %i númericos e %i espaços em branco, um total de %i caracteres", f, tcp, tcn, teb, comp);   
+}
+
+
+int main() 
+{
+   
+char frase[tam_str];
+int total_c, total_cp, total_cn, total_ceb;
+  
+  le_frase( frase); 
+  
+  total_c = tamanho(frase);
+  total_cp = conta_cp(frase);
+  total_cn = conta_cn(frase);
+  total_ceb =  conta_eb(frase);
+
+  saida(frase, total_c, total_cp, total_cn, total_ceb);
+}
+

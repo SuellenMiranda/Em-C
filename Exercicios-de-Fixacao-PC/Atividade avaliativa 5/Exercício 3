@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+const int tam_str = 100; 
+int i;
+
+void le_dados( char *nome, char *endereco, char *tel, char *idade)
+{
+  printf("\n\n\tNome: ");
+  scanf(" %30[^\n]", nome);
+    
+  printf("\n\tEndereço: ");
+  scanf(" %30[^\n]", endereco);
+
+  printf("\n\tTelefone: ");
+  scanf(" %30[^\n]", tel);
+    
+  printf("\n\tIdade: ");
+  scanf(" %30[^\n]", idade);
+}
+
+void mostra_dados(char *nome, char *endereco, char *tel, char *idade)
+{
+char resultado[tam_str];
+
+  strcpy(resultado, "Seu nome é ");
+  strcat(resultado, nome);
+
+  strcat(resultado, ", você tem ");
+  strcat(resultado, idade);
+
+  strcat(resultado, " anos, mora na rua ");
+  strcat(resultado, endereco);
+
+  strcat(resultado, " e seu telefone é ");
+  strcat(resultado, tel);
+
+  printf("\n%s", resultado);
+}
+
+
+int main() 
+{
+
+char n[tam_str], e[tam_str], t[tam_str], i[tam_str];
+
+  printf("\nDigite seus dados: \n");
+  le_dados(n, e, t, i);
+  
+  mostra_dados(n, e, t, i);
+}

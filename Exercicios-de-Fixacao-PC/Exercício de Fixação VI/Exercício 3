@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int cont_boi=0;
+  float peso_boi, peso_bmg, peso_bmm, peso_medio, soma_pb=0;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite o peso do 1º boi ou peso = 0 para parar: ");
+  scanf("%f", &peso_boi);
+
+  peso_bmg = peso_bmm = peso_boi;
+
+ //Processamento de Dados:
+  while (peso_boi != 0)
+  {
+    soma_pb += peso_boi;
+    cont_boi++;
+
+   if (peso_boi > peso_bmg)
+    peso_bmg = peso_boi;
+   else 
+    if (peso_boi < peso_bmm)
+     peso_bmm = peso_boi;
+
+   printf("\n\n\tDigite o peso do próximo boi ou peso = 0 para parar: ");
+   scanf("%f", &peso_boi);
+  }
+ 
+ //Saída de Dados:
+  if (cont_boi != 0)
+  {
+    peso_medio = soma_pb/cont_boi;
+
+    printf("\n\n\tPeso médio do rebanho = %.2f Kg", peso_medio);
+    printf("\n\n\tPeso do boi mais gordo = %.2f Kg", peso_bmg);
+    printf("\n\n\tPeso do boi mais magro = %.2f Kg", peso_bmm);
+  }
+  else
+   printf("\n\n\tNão existem dados para serem calculados...\n");
+
+  return 0;
+}
+
+

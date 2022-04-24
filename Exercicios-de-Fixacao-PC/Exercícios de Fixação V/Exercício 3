@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int mes, ano;
+
+  //Entrada de Dados:
+  printf("\n\n\tDigite o mes e o ano em números:");
+  scanf("%i%i", &mes, &ano);
+
+  //Processamento e saída de dados:
+  switch (mes)
+  {
+    case 4: case 6: case 9: case 11: printf("\n\tMes com 30 dias!"); break;
+    case 1: case 3: case 5: case 7:
+    case 8: case 10: case 12:        printf("\n\tMes com 31 dias!"); break;
+    case 2: if (ano % 4 == 0)
+       {
+         if (ano % 100 == 0)
+          {
+            if (ano % 400 == 0)
+             printf("\n\tAno bissexto, mes com 29 dias!");
+            else
+             printf("\n\tMes com 28 dias!");
+          }
+         else
+          printf("\n\tAno bissexto, mes com 29 dia!");
+        }
+        else
+          printf("/n/tMes com 28 dias!"); break;
+        default: printf("\n\tMes Invalido!");
+  }
+
+return 0;
+
+}

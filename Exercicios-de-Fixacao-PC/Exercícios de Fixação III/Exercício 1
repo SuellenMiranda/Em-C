@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void)
+
+
+{
+  int num1, num2, SOMA, SUB, MULT, DIV;
+
+  //Entrada de Dados
+  printf("\n\n\tDigite dois Números Inteiros:");
+  scanf("%i%i", &num1, &num2);
+
+  //Processamento de Dados 
+  SOMA = num1 + num2;
+  SUB = num1 - num2;
+  MULT = num1 * num2;
+  DIV = num1 / num2;
+
+  //Saída de Dados 
+  printf("\n\t%i + %i = %i", num1, num2, SOMA);
+  printf("\n\t%i - %i = %i", num1, num2, SUB);
+  printf("\n\t%i * %i = %i", num1, num2, MULT);
+  printf("\n\t%i / %i = %i", num1, num2, DIV);
+
+  return 0;
+}

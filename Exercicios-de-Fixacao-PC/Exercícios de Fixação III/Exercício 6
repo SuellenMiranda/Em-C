@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+int num1, num2, temp;
+
+//Entrada de dados:
+
+printf("\n\n\tDigite dois numeros: ");
+scanf("%i%i", &num1, &num2);
+printf("\n\n\tValores antes da troca: num1 = %i e num2 = %i", num1, num2);
+
+//Processamento de dados:
+
+temp = num1;
+num1 = num2;
+num2 = temp;
+
+//Saida de dados:
+
+printf("\n\n\tValores depois da troca: num1 = %i e num2 = %i", num1, num2);
+
+return 0;
+
+}

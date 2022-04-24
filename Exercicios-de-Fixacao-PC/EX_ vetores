@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+const int tam1 = 2, tam2 =3;
+int i;
+
+//Módulo de Entrada de Dados
+void le_vet_a(int va[tam1])
+{
+  printf("\n\n\tDigite os Números do Vetor A: ");
+  for(i=0; i < tam1; i++)
+  {
+    printf("\n\t%do Número: ", i+1);
+    scanf("%d", &va[i]);
+  }
+}
+
+//&(&*) se anulam
+
+void le_vet_b(int vb[tam2]) //int *vb 
+{
+  printf("\n\n\tDigite od Números do Vetor b; ");
+  for(i=0; i < tam2; i++)
+  {
+    printf("\n\t%do Número: ", i+1);
+    scanf("%d", &vb[i]);
+  }
+}
+
+//Módulo de Processamento de Dados
+void juncao(int va[tam1], int vb[tam2], int vc[tam1 + tam2])
+{
+  for(i=0; i < tam1; i++)
+      vc[i] = va[i];
+  for(i=0; i < tam2; i++)
+      vc[i+tam1] = vb[i];
+}
+
+void mostra_vet(int vc[tam1 + tam2])
+{
+  printf("\n\n\tVetor C Concentrado de A e B: \n");
+  for(i=0; i< tam1 + tam2; i++)
+    printf("%5d", vc[i]);
+  printf("\n\n\n");
+}
+
+int main()
+{
+  int vet_a[tam1], vet_b[tam2], vet_c[tam1+tam2];
+
+  //Entrada de Dados
+  le_vet_a(vet_a);
+  le_vet_b(vet_b);
+
+  //Processamento de Dados
+  juncao(vet_a, vet_b, vet_c);
+
+  //Saída de Dados
+  mostra_vet(vet_c);
+
+  return 0;
+}

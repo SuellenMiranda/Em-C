@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int num1, num2, SOMA;
+
+  //Entrada de dados:
+
+  printf("\n\n\tDigite 2 número inteiros:");
+  scanf("%i%i", &num1, &num2);
+
+  //Processamento de Dados:
+
+  SOMA = num1 + num2;
+
+  //Saída de Dados:
+
+  if (SOMA >= 10)
+   printf("\n\n\t%i + %i = %i", num1, num2, SOMA);
+  
+  else
+   printf("\n\n\tSoma dos números muito baixa");
+  
+
+  return 0;
+
+}

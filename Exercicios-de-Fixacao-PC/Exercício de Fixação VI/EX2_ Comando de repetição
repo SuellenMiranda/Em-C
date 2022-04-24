@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int N, i, fat=1;
+
+  //Entrada de dados com tratamento de erro:
+  do
+  {
+    printf("\n\tDigite um número interio >= 0: ");
+    scanf("%i", &N);
+
+    if ( N < 0 )
+     printf("\n\n\tNúmero inválido...Tente novaamente...\n");
+     
+  }while ( N < 0 );
+
+  //Processamento de dados:
+  for (i=2; i<=N; i++)
+    fat *= i;
+
+  //Saída de dados:
+  printf("\n\n\t%i ! = %i\n\n", N, fat);
+
+  return 0;
+}

@@ -1,0 +1,45 @@
+#include <stdio.h>
+const int lin = 2, col = 3;
+int i, j;
+
+void le_mat( int m[lin][col]);
+
+void mostra_mat( int m[lin][col]);
+
+
+int main()
+{
+  int mat[lin][col];
+
+   //Entrada de Dados:
+    printf("\n\n\tDigite os Números da Matriz:\n ");
+    le_mat(mat);
+
+   //Saída de Dados: Formato Matricial
+    printf("\n\n\tMatriz:\n ");
+    mostra_mat(mat);
+
+  return 0;   
+}
+
+
+void le_mat( int m[lin][col])
+{
+  for(i=0; i<lin; i++)
+    for(j=0; j<col; j++)
+    {
+      printf("\n\tposição[%i][%i]: ", i, j);
+      scanf("%i", &m[i][j]);
+    }
+}
+
+
+void mostra_mat( int m[lin][col])
+{
+  for(i=0; i<lin; i++)
+  {
+    for(j=0; j<col; j++)
+      printf("%5i", m[i][j]);
+      printf("\n");
+  }
+}

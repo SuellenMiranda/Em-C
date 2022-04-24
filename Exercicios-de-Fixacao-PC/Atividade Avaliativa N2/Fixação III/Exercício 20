@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+float base, altura, area, perimetro;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite os valores da base e a altura de um retângulo respectivamente: ");
+  scanf("%f%f", &base, &altura);
+
+ //Processamento de Dados:
+  area = base * altura;
+  perimetro = (2 * base)+(2 * altura);
+
+ //Saída de Dados:
+  printf("\n\n\tA área do retângulo = %.2f", area);
+  printf("\n\n\tO perímetro do retângulo = %.2f", perimetro);
+  
+  return 0;
+
+}

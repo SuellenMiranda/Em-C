@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int le_num()
+{
+int num;
+
+  printf("\n\n\tDigite um número: ");
+  scanf("%i", &num);
+
+return num;
+}
+
+
+void fala_num(int num)
+{
+
+char str[100], result[100];
+  sprintf(str, "%i", num); 
+
+int tam;
+  tam = strlen(str);
+  
+  strcpy(result, "");
+  for(int i=0; i < tam; i++)
+  {
+      if(i > 0)
+      {
+      strcat(result, ", ");
+      }
+
+      switch(str[i])
+      {
+       case '0': strcat(result, "zero"); break;
+       case '1': strcat(result, "um"); break;
+       case '2': strcat(result, "dois"); break;
+       case '3': strcat(result, "três"); break;
+       case '4': strcat(result, "quatro"); break;
+       case '5': strcat(result, "cinco"); break;
+       case '6': strcat(result, "seis"); break;
+       case '7': strcat(result, "sete"); break;
+       case '8': strcat(result, "oito"); break;
+       case '9': strcat(result, "nove"); 
+      }
+   }
+
+  printf("\n\n%s", result);
+}
+
+
+int main() 
+{
+int n;
+
+  n = le_num();
+  
+  fala_num(n);
+}

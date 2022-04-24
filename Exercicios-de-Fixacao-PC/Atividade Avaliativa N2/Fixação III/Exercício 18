@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+float massa, massa_g, novo_peso;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite o peso de alguém: ");
+  scanf("%f", &massa);
+
+ //Processamento de Dados:
+  massa_g = massa * 1000;
+  novo_peso = massa_g + (massa_g * 0.05);
+
+ //Saída de Dados: 
+  printf("\n\n\tO pesso em gramas = %.2f", massa_g);
+  printf("\n\n\tSe essa pessoa engordar 5%%, ela pesará = %.2f gramas", novo_peso);
+
+
+return 0;
+
+}

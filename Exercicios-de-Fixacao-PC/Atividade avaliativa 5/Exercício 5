@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+const int tam_str = 20;
+
+
+void leitura( char *v)
+{
+   printf("\n\n\tDigite uma frase: ");
+   scanf(" %20[^\n]", v);
+}
+
+
+int main() 
+{
+char str[tam_str];
+
+  leitura( str);
+
+
+  if(strcmp(str, "SIM") == 0)
+  {
+    printf("\n\tValor = 1");
+  }
+  else if(strcmp(str, "NAO") == 0)
+  {
+    printf("\n\tValor = 0");
+  } 
+}

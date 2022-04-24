@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+int salario;
+float imp_renda;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite o salário do funcionário: ");
+  scanf("%i", &salario);
+
+ //Processamento de Dados:
+  imp_renda = salario * 0.05;
+
+ //Saída de Dados:
+  printf("\n\n\tO valor a ser pago pelo funcionário = %.2f", imp_renda);
+
+return 0;
+
+}

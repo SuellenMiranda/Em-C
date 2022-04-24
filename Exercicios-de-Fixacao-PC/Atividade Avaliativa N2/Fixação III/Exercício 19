@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+float a, b, c, X;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite 3 valores reais: ");
+  scanf("%f%f%f", &a, &b, &c);
+
+ //Processamento de Dados:
+  X = ((a + (2 * b + c)* c)/ a * a);
+
+ //Saída de Dados:
+  printf("\n\n\tO resultado da equação = %.2f", X);
+
+return 0;
+
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+int SENHA;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite um número inteiro de 5 dígito: ");
+  scanf("%i", &SENHA);
+
+ //Processamento e Saída de Dados:
+  if(SENHA == 12345)
+   {
+    printf("\n\n\tAcesso permitido, senha correta!"); 
+   }
+  else 
+    {
+      printf("\n\n\tAcesso negado, senha incorreta!");
+    }
+   
+return 0;
+
+}

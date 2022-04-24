@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+   int tempo;
+   float prestacao, valor, taxa=2.0;
+
+  //Entrada de Dados:
+  printf("\n\n\tDigite o valor da prestação: ");
+  scanf("%f", &valor);
+  printf("\n\tDigite o tempo de atraso em dias: ");
+  scanf("%i", &tempo);
+
+  //Processamento de Dados:
+
+  prestacao = valor + (valor * taxa/100) * tempo;
+
+  //Saída de Dados:
+  printf("\n\n\tO valor final da prestação = %.3f", prestacao);
+
+  return 0;
+}

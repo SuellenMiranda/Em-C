@@ -1,0 +1,74 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+int IDADE;
+char Grupo_risco;
+
+ //Entrada de dados:
+  printf("\n\tDigite o seu nível de Grupo de Risco:\n\tBAIXO = b;\n\tMÉDIO = m;\n\tALTO = a;\n\t ");
+  scanf("%c", &Grupo_risco);
+  printf("\n\n\tDigite a sua idade: ");
+  scanf("%i", &IDADE);
+
+ //Processamento e Saída de Dados:
+  switch(Grupo_risco)
+  {
+    case 'b': 
+     if(IDADE >= 18 && IDADE <= 24)
+      {
+        printf("\n\n\tO seu código do Grupo de Rico: 7");
+      }
+     else
+      if(IDADE >=25 && IDADE <= 40)
+       {
+         printf("\n\n\tO seu código do Grupo de Risco: 4");
+       }
+      else
+       if(IDADE >= 41 && IDADE <= 70)
+        {
+          printf("\n\n\tO seu código do Grupo de Risco; 1");
+        }
+        break;
+
+    case 'm':
+     if(IDADE >= 18 && IDADE <= 24)
+      {
+        printf("\n\n\tO seu código do Grupo de Rico: 8");
+      }
+     else
+      if(IDADE >=25 && IDADE <= 40)
+       {
+         printf("\n\n\tO seu código do Grupo de Risco: 5");
+       }
+      else
+       if(IDADE >= 41 && IDADE <= 70)
+        {
+          printf("\n\n\tO seu código do Grupo de Risco; 2");
+        }
+        break;
+
+    case 'a':
+     if(IDADE >= 18 && IDADE <= 24)
+      {
+        printf("\n\n\tO seu código do Grupo de Rico: 9");
+      }
+     else
+      if(IDADE >=25 && IDADE <= 40)
+       {
+         printf("\n\n\tO seu código do Grupo de Risco: 6");
+       }
+      else
+       if(IDADE >= 41 && IDADE <= 70)
+        {
+          printf("\n\n\tO seu código do Grupo de Risco; 3");
+        }
+        break;
+
+  }
+  
+return 0;
+
+}

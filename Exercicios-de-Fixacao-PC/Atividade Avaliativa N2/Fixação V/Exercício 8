@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+int Codigo;
+float Salario, Aumento;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite o código do seu Cargo:\n\t1-escriturário;\n\t2-Secretário;\n\t3-Caixa;\n\t4-Gerente;\n\t5-Diretor;\n\n\t");
+  scanf("%i", &Codigo);
+
+  printf("\n\n\tDigite o salário atual: ");
+  scanf("%f", &Salario);
+
+ //Processamento e Saída de Dados;
+  if(Codigo == 1)
+   {
+    Aumento = Salario + (Salario * 0.5);
+    printf("\n\n\tDevido de cargo, seu salário será aumentado para: %.2f", Aumento);
+   }
+  else
+   if(Codigo == 2)
+    {
+     Aumento = Salario + (Salario * 0.35);
+     printf("\n\tDevido de cargo, seu salário será aumentado para: %.2f", Aumento);
+    }
+   else
+    if(Codigo == 3)
+     {
+      Aumento = Salario + (Salario * 0.2);
+      printf("\n\tDevido de cargo, seu salário será aumentado para: %.2f", Aumento);
+     }
+    else
+     if(Codigo == 4)
+      {
+       Aumento = Salario + (Salario * 0.1);
+       printf("\n\tDevido de cargo, seu salário será aumentado para: %.2f", Aumento);
+      }
+     else
+      if(Codigo == 5)
+       {
+        printf("\n\tDevido de cargo, não haverá aumento");
+       }
+      else
+       printf("\n\tCodigo desconhecido...");
+
+return 0;
+
+}

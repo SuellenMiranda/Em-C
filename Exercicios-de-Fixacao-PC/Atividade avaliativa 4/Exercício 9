@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int matriz1[5][3] = {{1, 2, 3}, 
+                     {4, 5, 6},
+                     {7, 8, 9},
+                    {10, 11, 12},
+                    {13, 14, 15}};
+
+int matriz2[5][3] = {{15, 14, 13},
+                     {12, 11, 10},
+                      {9, 8, 7},
+                      {6, 5, 4}, 
+                      {3, 2, 1}};
+
+
+int main()
+{
+
+int i, j, matriz_somada[5][3];
+
+   for (i = 0; i < 5; i = i + 1)
+  {
+   for (j = 0; j < 3; j = j + 1) 
+    matriz_somada[i][j] = matriz1[i][j] + matriz2[i][j];
+  }
+
+printf("\n\n\tSoma das Matrizes:\n\n");
+
+  for (i = 0; i < 5; i = i + 1)
+  {
+   for (j = 0; j < 3; j = j + 1) 
+      printf("\t%3d", matriz_somada[i][j]);
+      printf("\n");
+  }
+  
+return 0;
+}

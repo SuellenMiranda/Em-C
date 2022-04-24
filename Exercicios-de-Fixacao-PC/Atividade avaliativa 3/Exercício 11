@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int entrada_NUM();
+int saida_qnt(int num1, int num2);
+int verifica_p(int inicio, int fim);
+
+int main(void)
+{
+
+int num1, num2, numero_p, numero_i;
+
+  num1 = entrada_NUM();
+  num2 = entrada_NUM();
+
+  saida_qnt(num1, num2);
+
+return 0;
+}
+
+int entrada_NUM() 
+{
+
+int numDigitado;
+
+  printf("\n\n\tDigite um números inteiro:");
+  scanf("%i", &numDigitado);
+
+return numDigitado;
+}
+
+int saida_qnt(int num1, int num2)
+{
+
+  int numero_p = verifica_p(num1, num2);
+  int numero_i = (num2 - num1) - numero_p;
+
+  printf("\n\n\tQuantidade de Pares: %i", numero_p);
+  printf("\n\n\tQuanidade de Ímpares: %i", numero_i);
+
+return 0;
+}
+
+int verifica_p(int inicio, int fim)
+{
+
+int n=0, i;
+
+  for(i=inicio; i<=fim; i++)
+  {
+    if((i%2)==0)
+    {
+      n += 1;
+    }
+  }
+
+return n;  
+}

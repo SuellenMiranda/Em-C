@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int F;
+  float C;
+
+  //Entrada de Dados:
+
+  printf("\n\n\tEscreva uma temperatura em Fahrenheit:");
+  scanf("%i", &F);
+
+  //Processamento de Dados:
+  
+  C = (F - 32) * (5/9.0);
+
+  //Saída de Dados:
+
+  printf("\n\n\tTemperatura em Celsius = %.2f", C);
+
+  return 0;
+}

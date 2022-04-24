@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+const int tam_str = 70;
+
+void le_frase( char *l)
+{
+  printf("\n\n\tEscreva uma frase de até 70 caracteres: ");
+  scanf(" %100[^\n]", l);
+}
+
+void duplica_frase( char *l)
+{
+char duplica_frase[tam_str];
+int tam, i, j;
+   
+   tam = strlen(l);
+
+   for(i = 0, j = 0; i <= tam; i++)
+   {
+
+    duplica_frase[j] = l[i]; 
+    duplica_frase[j+1] = l[i]; 
+
+    j = j+2; 
+   }
+  printf("\n\n\tA frase duplicada fica: %s", duplica_frase);
+}
+
+
+int main() 
+{
+
+char frase[tam_str];
+
+  le_frase(frase);
+  duplica_frase(frase);
+}

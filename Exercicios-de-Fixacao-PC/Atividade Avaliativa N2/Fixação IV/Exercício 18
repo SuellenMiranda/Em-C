@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+float salario, aumento;
+
+ //Entrada de dados:
+  printf("\n\n\tDigite o salário de um funcionário: ");
+  scanf("%f", &salario);
+
+ //Processamento e Saída de Dados:
+  if (salario < 500)
+   {
+     aumento = salario + (salario * 0.04);
+     printf("\n\n\tO salário reajustado é = %.2f", aumento);
+   }
+  else 
+   printf("\n\n\tEsse funcionário não tem direito ao aumento...");
+
+return 0;
+
+}

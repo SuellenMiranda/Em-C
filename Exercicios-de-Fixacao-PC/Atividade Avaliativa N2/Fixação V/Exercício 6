@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+float Nota_TL, Nota_AS, Nota_EF, Mfinal;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite as notas (0 a 10) do aluno respectivamente:\n\n\tTrabalho de Laboratório, Avaliação Semestral e Exame Final\n\t");
+  scanf("%f%f%f", &Nota_TL, &Nota_AS, &Nota_EF);
+
+ //Processamento e Saída de Dados:
+  Mfinal = ((Nota_TL*2)+(Nota_AS*3)+(Nota_EF*5))/10;
+  printf("\n\n\n\tMédia final do aluno = %.2f", Mfinal);
+
+  if(Mfinal > 8.0)
+   {
+     printf("\n\tConceito do aluno = A");
+   }
+  else
+   if (Mfinal > 7.0)
+    {
+      printf("\n\tConceito do aluno = B");
+    }
+   else
+    if(Mfinal > 6.0)
+     {
+       printf("\n\tConceito do aluno = C");
+     } 
+    else
+     if(Mfinal >= 5.0)
+      {
+        printf("\n\tConceito do aluno = D");
+      }  
+     else
+      if(Mfinal < 5.0)
+       {
+         printf("\n\tConceito do aluno = E");
+       }
+
+return 0;
+
+}

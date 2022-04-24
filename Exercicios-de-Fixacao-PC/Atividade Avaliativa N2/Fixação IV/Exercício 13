@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+float salario, Sdesconto;
+
+ //Entrada de Dados:
+  printf("\n\n\tDigite o salário de um funcionário: ");
+  scanf("%f", &salario);
+
+ //Procesamento e Saída de Dados:
+  if(salario < 1000)
+   {
+     Sdesconto = salario - (salario * 0.05);
+     printf("\n\tSalário com desconto = %.2f", Sdesconto);
+   }
+  else 
+   {
+     if(salario > 2000)
+      {
+       Sdesconto = salario - (salario * 0.15);
+       printf("\n\tSalário com desconto = %.2f", Sdesconto);
+      }
+     else 
+      {
+        Sdesconto = salario - (salario * 0.10);
+        printf("\n\tSalário com desconto = %.2f", Sdesconto);
+      }
+   }
+
+return 0;
+
+}

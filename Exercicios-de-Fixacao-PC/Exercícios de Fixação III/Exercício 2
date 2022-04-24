@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  int num, num2;
+
+  //Entrada de dados:
+  printf("\n\n\tDigite um número inteiro:");
+  scanf("%i", &num);
+
+  //Processamento de dados:
+  num2 = num * num;
+
+  //Saída de dados:
+  printf("\n\n\t%i elevado ao quadrado é igual a %i", num, num2);
+
+
+return 0;
+}

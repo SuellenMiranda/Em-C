@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+const int lin = 5, col = 4;
+int i, j;
+
+void processa(int matriz1[lin][col]);
+void mostra_mat(int matriz1[lin][col]);
+
+
+void le(int matriz1[lin][col])
+{
+  for(i = 0; i < lin; i++)
+  {
+    printf("\n\n\tArmazém %i:", i+1);
+     for(j = 0; j < col; j++)
+     {
+       printf("\n\n\tProduto %i = ", j+1);
+       scanf("%i", &matriz1[i][j]);
+     }
+  } 
+}
+
+void processa(int matriz1[lin][col])
+{
+int lin_Menor = 0, lin_Maior = 0;
+int total_prod[lin], maior, menor;
+
+  for(i = 0; i < lin; i++)
+  {
+   total_prod[i] = 0;
+    for(j = 0; j < col; j++)
+    {
+     total_prod[i] += matriz1[i][j];
+    }
+  }
+
+  maior = total_prod[0];
+  menor = total_prod[0];
+
+  for(i = 1; i < lin; i++)
+  {
+    if(total_prod[i] > maior)
+    {
+      maior = total_prod[i];
+      lin_Maior = i;
+    }
+    if(total_prod[i] < menor)
+    {
+      menor = total_prod[i];
+      lin_Menor = i;
+    }
+  }
+
+  printf("\n\n\tMatriz de - Armazém x Produto:\n\n");
+  mostra_mat(matriz1);
+
+  printf("\n\n\tNúmero de itens armazenados:\n\n");
+  for(i = 0; i < lin; i++){
+     printf("\n\n\tArmazém %i: %i", i+1, total_prod[i]);
+  }
+
+  printf("\n\n");
+
+  printf("\n\n\tO Armazém com maior estoque = %i\n", lin_Maior + 1);
+
+  printf("\n\n\tO Armazém com menor estoque = %i\n", lin_Menor + 1);
+}
+
+void mostra_mat(int matriz1[lin][col])
+{
+  for(i=0;i < lin; i++)
+  {
+    for(j=0;j < col;j++)
+    {
+      printf("%6i", matriz1[i][j]);
+    }
+    printf("\n\n");
+  }
+}
+
+int main() 
+{
+
+int mat[lin][col];
+
+
+  le(mat);
+
+  processa(mat);
+}

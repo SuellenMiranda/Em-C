@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+  
+  //Processamento e Saída de Dados:
+  printf("\n\n\tNúmeros de 0 a 100: ");
+  for (int cont=0; cont<=100; cont++)
+    printf("%5i", cont);
+
+  return 0;
+}
