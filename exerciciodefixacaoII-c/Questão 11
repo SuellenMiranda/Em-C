@@ -1,0 +1,14 @@
+- real nota1, nota2, media;
+    declaração de 3 variaveis reais (float)
+
+- escreva(“Digite as duas notas: “);
+    (printf)
+
+- leia(“%r%r”, &nota1, &nota2);
+    entrada de dados nas varivaveis nota1 e nota2
+
+- media = (nota1 + nota2 ) / 2;
+    decretando o valor da variavel media
+
+- escreva(“ Media = %r “, media); 
+    saida de dados, mediante a variavel media

@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int cod_prod1, cod_prod2;
+float preco_prod1, preco_prod2;
+char tipo_prod1, tipo_prod2;
+
+int main() {
+  printf("Bem-Vindo! \n");
+  
+  return 0;
+}
+

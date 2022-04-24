@@ -1,0 +1,48 @@
+//5
+#include<stdio.h>
+
+//definicoes/declaraçoes iniciais
+#define ROW 5
+#define COL 3
+
+//main matriz1e2
+int main()
+{
+    int i, j, arr1[ROW][COL], arr2[ROW][COL];
+
+    printf("Insir 1ª matriz: \n");
+
+    for(i = 0; i < ROW; i++)
+    {
+        for(j = 0; j < COL; j++)
+        {
+            scanf("%d", &arr1[i][j]);
+        }        
+    }
+
+    printf("\nInsir 2ª matriz: \n");
+
+    for(i = 0; i < ROW; i++)
+    {
+        for(j = 0; j < COL; j++)
+        {         
+            scanf("%d", &arr2[i][j]);
+        }                
+    }
+
+//soma das matrizes 1e2 + resultado
+    printf("\nmatriz1 + matriz2 = \n");
+
+    // somar as matrizes
+    for(i = 0; i < ROW; i++)
+    {
+        for(j = 0; j < COL; j++)
+        {
+            printf("%5d ", arr1[i][j] + arr2[i][j]);            
+        }        
+        printf("\n");
+    }       
+
+  
+    return 0;
+}

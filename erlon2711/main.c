@@ -1,0 +1,181 @@
+//11 Faça um programa C totalmente modularizado que leia os limites de um intervalo de números inteiros, identifique, conte e imprima a quantidade de números pares e ímpares deste intervalo. Construir uma função para identificar, contar a quantidade de números pares e ímpares. 
+
+#include <stdio.h>
+
+//Entrada de Dados
+void leitura(int *pli, int *pls); 
+//PPR (Ponteiros para os limites inferior e superior)
+
+
+//Processamento de Dados
+void conta_pi(int li, int ls, int *pcp, int *pci); 
+//limites e ponteiros para os contadores 
+
+
+//Saída de Dados
+void mostra_dados(int qp, int qi); 
+//Quantidade de Pares e Ímpares á Imprimir na Tela
+
+
+//Rolação de dados
+int main(void) {
+  int limite_inf, limite_sup, total_p = 0, total_i = 0;
+
+  //Entrada de Dados
+  leitura(&limite_inf, &limite_sup);
+
+  //Processamento de Dados
+  conta_pi(limite_inf, limite_sup, &total_p, &total_i);
+
+  //Saída de Dados
+  mostra_dados(total_p, total_i);
+
+  return 0;
+}
+
+//Lendo dados
+void leitura(int *pli, int *pls) {
+
+  int troca = 0;
+
+  printf("Escreva o limite inferior e o superior de um intervalo de números que desejar: ");
+  scanf("%i%i", pli, pls);
+
+}
+
+//Conta para processar os dados
+void conta_pi(int li, int ls, int *pcp, int *pci) {
+
+  for (int i = li; i <= ls; i++)
+       if (i % 2 == 0)
+         (*pcp)++; //o mesmo que *pcp = *pcp + 1;
+       else
+         (*pci)++; //o mesmo que *pci = *pci + 1;
+}
+
+//Visualização -printf- dos dados processados finais
+void mostra_dados(int qp, int qi) {
+  printf("Número de pares no intervalo: %i, \tNúmero de Ímpares no intervalo: %i", qp, qi);
+}
+
+
+
+
+// 12 Faça um programa C totalmente modularizado que utilizando uma função ordene três números inteiros (distintos). Imprima os números em ordem crescente em um módulo específico. A função deve receber apenas os três parâmetros (ponteiros) para ordenar os números por referência. Dica: Podem usar variáveis locais para ajudar no processo de ordenação.
+
+
+#include <stdio.h>
+#include <stdio.h>
+
+
+//Declaração dos dados dos ponteiros numéricos
+void leitura(int *num1, int *num2, int *num3);
+void ordena(int n1, int n2, int n3, int *pri, int *seg, int *ter);
+void mostra_dados(int p, int s, int t);
+
+
+
+//preparação do ponteiros numéricos
+int main(void) {
+   
+   int numero1, numero2, numero3, primeiro, segundo, terceiro;
+
+   leitura(&numero1, &numero2, &numero3);
+
+   ordena(numero1, numero2, numero3, &primeiro, &segundo, &terceiro);
+
+   mostra_dados(primeiro, segundo, terceiro);
+}
+
+
+//ler os numeros (ponteiros)
+void leitura(int *num1, int *num2, int *num3){
+    
+    printf("Digite três números inteiros: ");
+    scanf("%i%i%i", num1, num2, num3);
+}
+
+
+//ordenando n1, n2 e n3 desordenado
+void ordena(int n1, int n2, int n3, int *pri, int *seg, int *ter){
+
+  if (n1 <= n2 && n2 <= n3)
+  {
+      *pri = n1, *seg = n2, *ter = n3;
+  }
+  else if (n1 <= n3 && n3 <= n2)
+  {
+      *pri = n1, *seg = n3, *ter = n2;
+  }
+  else if (n2 <= n1 && n1 <= n3)
+  {
+      *pri = n2, *seg = n1, *ter = n3;
+  }
+  else if (n2 <= n3 && n3 <= n1) 
+  {
+      *pri = n2, *seg = n3, *ter = n1;
+  }
+  else if (n3 <= n1 && n1 <= n2) 
+  {
+      *pri = n3, *seg = n1, *ter = n2;
+  }
+  else 
+  {
+      *pri = n3, *seg = n2, *ter = n1;
+  }
+   
+}
+
+
+//mostrar dados finais ordenados
+void mostra_dados(int p, int s, int t){
+
+  printf("Sequência em ordem crescente: %i, %i, %i", p, s, t);
+}
+
+
+
+
+
+//13 Seja o seguinte trecho de programa:
+  //int i=3,j=5;
+  //int *p, *q;
+  //p = &i;
+  //q = &j;
+//Qual é o valor das seguintes expressões ?
+
+a) a) p == &i  
+  => p = memória i 
+    logo  p = 3 
+
+b) *p-*q 
+  => 3-5 
+    => -2
+
+c) (*p)*(*q) 
+  => 3*5 => 15 
+    diferente de (*p)*(q)==20 
+      logo é falsa
+
+d) 10* -3/5+7 
+  => -30/5+7 
+    => -6+7 => 1
+
+
+
+
+
+// 14 Se i e j são variáveis inteiras e p e q ponteiros para inteiros devidamente inicializadas, quais das seguintes expressões de atribuição são ilegais?
+  // a) p = &i; b) *q = &j; c) p = q; d) i = *j; e) i = *&j; f) i = *&*&j; g) q = *p; h) i = (*p)++ + *q
+
+        legais
+          a) p = &i;
+          c) p = q;
+          f) i = *&*&j;
+          h) i = (*p)++ + *q;
+
+        ilegais
+          b) *q = &j;
+          d) i = *j;
+          e) i = *&j;
+          g) q = *p;

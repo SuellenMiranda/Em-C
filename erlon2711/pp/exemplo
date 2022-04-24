@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    printf("Digite 3 numeros:\n");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a > c) {
+        int tmp = c;
+        c = a;
+        a = tmp;
+    }
+    if (a > b) {
+        int tmp = b;
+        b = a;
+        a = tmp;
+    }
+    if (b > c) {
+        int tmp = c;
+        c = b;
+        b = tmp;
+    }
+    printf("%d %d %d", a, b, c);
+}
+
+//#include <stdio.h>
+//int main (  )
+//{
+  //int i;
+  // imprime sempre na mesma linha sobrescrevendo a mesg anterior
+  //for (i = 0; i < 1000000; i++)
+    //printf("\rEstamos em %d", i);
+  // pula uma linha para não misturar com a de terminal
+  //printf("\n");
+  //return 0;
+//}
+
+
+// 12 Faça um programa C totalmente modularizado que utilizando uma função ordene três números inteiros (distintos). Imprima os números em ordem crescente em um módulo específico. A função deve receber apenas os trêsparâmetros (ponteiros) para ordenar os números por referência. Dica: Podem usar variáveis locais para ajudar no processo de ordenação.
+
+
+#include <stdio.h>
+
+
+int main(int argc, char **argv) {
+  int listaDeNumeros[10];
+
+  printf("Digite 10 números inteiros\n");
+
+  for(int i = 0; i < 10; i++) {
+    scanf("%i", &listaDeNumeros[i]);
+  }
+
+  for(int i = 0; i < sizeof(listaDeNumeros); i++) {
+    for(int j = 0; j < sizeof(listaDeNumeros); j++) {
+      int aux;
+      if (listaDeNumeros[i] < listaDeNumeros[j]) {
+        aux = listaDeNumeros[i];
+        listaDeNumeros[i] = listaDeNumeros[j];
+        listaDeNumeros[j] = aux;
+      }
+    }
+  }
+
+  
+  printf("\nLISTA ORDENADA\n");
+  for (int i=0; i < sizeof(listaDeNumeros); i++) {
+    printf("%i\n", listaDeNumeros[i]);
+  }
+
+  return 0;
+}
+

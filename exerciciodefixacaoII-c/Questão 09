@@ -1,0 +1,5 @@
+9- 
+(X) SIMBOLO <-- 5; (X) SOMA <-- NUM+2*X;
+( ) X*X <-- SOMA;  (X) TUDO <-- SOMA;
+(X) X <-- X+1;     () NUM <-- 5*SOMA+2;
+(X) NUM <-- ”*ABC*”;

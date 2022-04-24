@@ -1,0 +1,40 @@
+//7
+#include <stdio.h>
+
+
+//primeiro imprimir
+int imprime( char a[][10] ) {
+  int i,j=10;
+  for (i=0;i<40;i++){
+        printf("\t%s",a[i]);
+        printf("\n");
+    };
+    
+};
+
+//guardar e selecionar
+const int lin=40, col=10;
+void encontra_maior( char a[lin][col] ) {
+    int i=0;
+    char Letra [1][1]= {"A"};
+    for(i=0;i<lin;i++){
+            if ( a[i][0] == 'A'){
+            printf("\nNomes com inicial  %s : %s\n",Letra [0] ,a[i]);
+            }}
+            
+           
+}
+
+//mostrar nomes com letra inicia "A"
+int main () {
+  char v[40][10];
+  int i;
+
+  for (i=0;i<40;i++) {
+     printf("Informe o nome do aluno %d: ",i+1);
+      scanf("%s",&v[i]);
+    }
+  printf("\nSua lista de presenca\n");
+  imprime(&v);
+  encontra_maior(&v);
+}

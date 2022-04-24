@@ -1,0 +1,4 @@
+a) char; int;
+b) int; char;
+c) float; char;
+d) int; float; int;

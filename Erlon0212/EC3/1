@@ -1,0 +1,57 @@
+//1
+#include<stdio.h>
+#include<stdlib.h>
+
+//declarações
+const int n=4;
+int i, j;
+
+//voids
+void preenche(int m[n][n]);
+void mostra_mat(int m[n][n]);
+
+//"ints"
+int main()
+{
+
+int mat[n][n];
+
+    //Dados
+      //Entrada
+      //automáticamente
+
+  preenche( mat );
+
+      //Saída
+
+  printf("\n\n\tMatriz Identidade %d x %d\n\n", n, n);
+  mostra_mat(mat);
+
+system("pause");
+}
+
+
+//preenchimento das matrizes
+
+void preenche(int m[n][n])
+{
+
+//usando for e it(e else)
+for(i=0;i<n; i++)
+ for(j=0;j<n;j++)
+  if(i==j)
+   m[i][j]=1;
+ else
+  m[i][j]=0;
+}
+
+//parte final que mostra a Matriz ij
+void mostra_mat(int m[n][n])
+{
+ for(i=0;i<n; i++)
+ {
+  for(j=0;j<n;j++)
+   printf("%5d", m[i][j]);
+   printf("\n\n");
+ }
+}

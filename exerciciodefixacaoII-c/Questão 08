@@ -1,0 +1,17 @@
+8:
+
+a-
+a + 1 >= b*a (F)
+nome != “ana” (F)
+profissao == “médico” (F)
+
+b-
+a + 1 >= b – 5 (F)
+nome != “ana” (V)
+profissao == “médico” (V)
+
+c-
+(( x + y > z ) && (nome == “maria”)) (F)
+(( x *y > z ) || ( y > = x )) (V)
+(!( x - y > z ) && ( z / y + 1 == x )) (F)
+((nome == “josé”) && ( x + y + z < ( y*y ))) (F)

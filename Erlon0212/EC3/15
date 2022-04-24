@@ -1,0 +1,91 @@
+//15
+#include <stdio.h>
+
+const int lin = 5, col = 4;
+int i, j;
+
+//voids
+void leitura(int mA[lin][col]);
+
+void processamento(int mA[lin][col]);
+
+void mostra_matriz(int mA[lin][col]);
+
+//main
+int main(void) {
+
+  int mat[lin][col];
+
+
+  leitura(mat);
+
+
+  processamento(mat);
+
+}
+
+
+
+//leitura
+void leitura(int mA[lin][col]){
+   for(i = 0; i < lin; i++){
+      printf("\n\n===== Armazém %i =====", i+1);
+        for(j = 0; j < col; j++){
+        printf("\nProduto %i: ", j+1);
+        scanf("%i", &mA[i][j]);
+        }
+     } 
+}
+
+//processando
+void processamento(int mA[lin][col]){
+  
+  int total_itens[lin], maior, menor, linMenor = 0, linMaior = 0;
+
+   for(i = 0; i < lin; i++){
+     total_itens[i] = 0;
+     for(j = 0; j < col; j++){
+     total_itens[i] += mA[i][j];
+     }
+   }
+  
+   maior = total_itens[0];
+   menor = total_itens[0];
+
+   for(i = 1; i < lin; i++){
+      
+      if(total_itens[i] > maior){
+        maior = total_itens[i];
+        linMaior = i;
+      }
+      if(total_itens[i] < menor){
+        menor = total_itens[i];
+        linMenor = i;
+      }
+   }
+  
+//pronto
+  printf("\n\n===== Armazém x Produto =====\n\n");
+  mostra_matriz(mA);
+  
+  printf("\n\n====Quant de itens armazenados====\n\n");
+  for(i = 0; i < lin; i++){
+     printf("\n\nArmazém %i: %i", i+1, total_itens[i]);
+  }
+
+  printf("\n\nO Armazém %i possui maior quant de itens em estoque\n\n", linMaior + 1);
+  
+  printf("\n\nO Armazém %i possui menor quant de itens em estoque\n\n", linMenor + 1);
+}
+
+//mostra_matriz
+void mostra_matriz(int mA[lin][col]){
+  
+
+  for(i=0;i < lin; i++){
+    for(j=0;j < col;j++){
+      printf("%5d", mA[i][j]);
+    }
+  printf("\n\n");
+  }
+}

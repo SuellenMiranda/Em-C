@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+inteiro endereco n_filhos;
+// inteiro --> int
+
+caractere idade, X, C;
+//caractere --> char
+
+real XPTO, C, peso, R$;
+//real --> float, $ n é permitido na declaração de variaveis 
+
+

@@ -1,0 +1,74 @@
+//3
+#include <stdio.h>
+
+
+//variaveis
+const int n = 10;
+int i, j;
+
+
+//prototipos
+void leitura(int m[n][n]);
+
+float calc_media(int m[n][n]); 
+
+void mostra_resultado(int m[n][n]); 
+
+
+
+//parametros
+int main(void) {
+
+   int mat[n][n]; 
+
+
+
+  leitura(mat);
+
+
+  printf("\n\n\tMatriz %i x %i\t\n\n", n, n);
+  mostra_resultado(mat);
+}
+
+
+//funçoes 2/2 
+void leitura(int m[n][n]){
+   
+   printf("\n\nDigite os números da matriz (linha e coluna:\n\n ");
+
+   for(i = 0; i < n; i++)
+      for(j = 0; j < n; j++){
+       printf("\nposição[%i][%i]: ", i+1, j+1);
+       scanf("%i", &m[i][j]);
+       }
+   
+}
+
+float calc_media(int m[n][n]){
+    
+    int soma = 0; 
+    float med; 
+
+    for(i = 0; i < n; i++){
+      
+    soma += m[i][i];       
+    }
+
+  med = (float)soma/2;
+
+  return med;
+}
+
+//mostra_resultado
+void mostra_resultado(int m[n][n]){
+  
+  for(i=0;i < n; i++){
+    for(j=0;j < n;j++){
+      printf("%5d", m[i][j]);
+    }
+  printf("\n\n");
+  }
+
+
+  printf("A média é: %.2f", calc_media(m));
+}

@@ -1,0 +1,25 @@
+início
+
+inteiro X, Y;
+real Z;
+
+
+Z <-- 1.5;
+
+escreva(X, “ ELEVADO AO CUBO = “, X*X*X); --> escreva("ELEVADO AO CUBO = ", X*X*X);
+
+escreva(“Digite outro valor inteiro: “) <-- ;
+
+leia(Y);
+
+escreva(“A soma e: , X+Y); <-- faltando " no final do parenteses
+
+Z + 3 <-- Z + 1;
+X <-- (Y + X) / 5.0;
+escreva(“O valor final da expressao e: “ X); --> escreva(“O valor final da expressao e: %i“, X);
+
+escreva(“Digite um valor inteiro: “);
+
+leia(X; --> leia("%i", &X);
+
+fim

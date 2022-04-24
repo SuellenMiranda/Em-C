@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+float x, b, c, z, s;
+int y, a, d, p, q, r;
+float letraA, letraB, letraC, letraD, letraE, letraF;
+
+int main() {
+x = 6.0;
+y = 2;
+z = 4.0;
+a = 8;
+b = 7.5;
+c = 7.7;
+d = 12;
+p = 4;
+q = 3;
+r = 10;
+s = 3.5;
+
+letraA = x + y - z * a;
+letraB = d / y % r * c - b - sqrt(d-q);
+letraC = d % y - pow(p ,q) * z;
+letraD = y / d + sqrt(b + s + pow(q,3)- y);
+letraE = (z * r / (a + d) * a) - d;
+letraF = 100 * (q / p) + r;
+
+printf("Resultado da letra a e %.2f\n", letraA);
+printf("Resultado da letra b e %.2f\n", letraB);
+printf("Resultado da letra c e %.2f\n", letraC);
+printf("Resultado da letra d e %.2f\n", letraD);
+printf("Resultado da letra e e %.2f\n", letraE);
+printf("Resultado da letra f e %.2f\n", letraF);
+
+return 0;
+}
