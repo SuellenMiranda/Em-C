@@ -1,0 +1,120 @@
+//13
+#include <stdio.h>
+
+//matriz
+const int num1 = 4, num2 = 3;
+int i, j;
+
+int matriz(int num1, int num2);
+int mostrar_matriz(int num1, int num2);
+int comparar_matriz(int num1, int num2);
+
+void matriz_m1(int m1[num1][num2]) {
+  for ( i = 0; i < num1; i++) {
+    for ( j = 0; j < num2; j++) {
+      printf("\n inserir numeros para as posiçoes %i x %i da matriz 1: ", i + 1, j + 1);
+      scanf("%d", &m1[i][j]);
+    }
+  }
+}
+
+//mostrandi a 1 matriz
+void mostrar_m1(int m1[num1][num2]) {
+    for (i = 0; i < num1; i++) {
+      for (j = 0; j < num2; j++) {
+        printf("%5d", m1[i][j]);
+
+      }
+    printf("\n\n");
+
+  } 
+}
+
+//matriz 2ª
+void matriz_m2(int m2[num1][num2]) {
+  for ( i = 0; i < num1; i++) {
+    for ( j = 0; j < num2; j++) {
+      printf("\nEnsira um numero para as posiçoes %i x %i da matriz: ", i + 1, j + 1);
+      scanf("%d", &m2[i][j]);
+    }
+  }
+}
+
+//mostra matriz 1º
+void mostrar_m2(int m2[num1][num2]) {
+    for (i = 0; i < num1; i++) {
+      for (j = 0; j < num2; j++) {
+        printf("%5d", m2[i][j]);
+
+      }
+    printf("\n\n");
+  } 
+}
+
+void matriz_m3(int m3[num1][num2]) {
+  for ( i = 0; i < num1; i++) {
+    for ( j = 0; j < num2; j++) {
+      printf("\nEnsira um numero para as posiçoes %i x %i da matriz: ", i + 1, j + 1);
+      scanf("%d", &m3[i][j]);
+    }
+  }
+}
+
+//mostra matriz 1
+void mostrar_m3(int m3[num1][num2]) {
+    for (i = 0; i < num1; i++) {
+      for (j = 0; j < num2; j++) {
+        printf("%5d", m3[i][j]);
+
+      }
+    printf("\n\n");
+  } 
+}
+
+//camparação 1
+void comparar(int m1[num1][num2], int m2[num1][num2]) {
+  int m3[num1][num2];
+
+  for (i = 0; i < num1; i++) {
+    for (j = 0; j < num2; j++) {
+      if(m1[i][j] == m2[i][j]){
+        m3[i][j] = 1;
+      }
+      else{
+        m3[i][j] = 0;
+      }
+    }
+  }
+
+  for (i = 0; i < num1; i++) {
+    for (j = 0; j < num2; j++) {
+      printf("%5d", m3[i][j]);
+
+    } 
+    printf("\n\n");
+  }
+}
+
+
+int main(void) {
+  
+  int m1[num1][num2];
+  int m2[num1][num2];
+  int m3[num1][num2];
+
+  matriz_m1(m1);
+  printf("\n\nThe matrix A é: \n\n");
+  mostrar_m1(m1);
+
+  printf("\n");
+
+  matriz_m2(m2);
+  printf("\n\nThe matrix B é: \n\n");
+  mostrar_m2(m2);
+
+  printf("\n");
+
+  //comparação
+  printf("The true or false comparison of the two matrices generates matrix C: \n\n");
+  comparar(m1, m2);
+}

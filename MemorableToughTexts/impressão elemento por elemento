@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define LINHA 3
+#define COLUNA 3
+
+int matriz[LINHA][COLUNA]; // Declaração da Matriz apartir de define
+int i, j; // Declaração dos contadores de linha (i) e coluna (j)
+
+
+int main(void) {
+
+  printf ("\nDigite valor para os elementos da matriz\n\n");
+  
+  for ( i=0; i<LINHA; i++ )
+    for ( j=0; j<COLUNA; j++ )
+    {
+      printf ("\nElemento[%d][%d] = ", i, j);
+      scanf ("%d", &matriz[i][j]);
+    }
+  
+  printf("\n\n******************* Saida de Dados ********************* \n\n");
+
+  for ( i=0; i<LINHA; i++ )
+    for ( j=0; j<COLUNA; j++ )
+    {
+      printf ("\nElemento[%d][%d] = %d\n", i, j,matriz[i][j]);
+    }
+
+  return 0;
+}

@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+float calc_media(int matriz[10][10]);
+
+int main()
+{
+
+  int matriz[10][10],i, j;
+  float media;
+
+  printf ("\nDigite valor para os elementos da matriz\n\n");
+  
+  for ( i=0; i<10; i++ )
+    for ( j=0; j<10; j++ )
+    {
+      printf ("\nElemento[%d][%d] = ", i, j);
+      scanf ("%d", &matriz[ i ][ j ]);
+    }
+
+    media = calc_media(matriz);
+  
+  printf("\n\n******************* Saida de Dados ********************* \n\n");
+  
+  for ( i=0; i<10; i++ ){
+    for ( j=0; j<10; j++ )
+    {
+      printf ("\t\t%d\t\t",matriz[ i ][ j ]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+    
+    printf("Media da Diagonal principal e igual a %.1f", media);
+  
+  return(0);
+}
+
+float calc_media(int matriz[10][10])
+{
+float media;
+int soma_dp, i;
+
+  for(i=0; i < 10; i++)
+    soma_dp += matriz[i][i];
+
+  media = soma_dp/10;
+
+  return media;
+}
