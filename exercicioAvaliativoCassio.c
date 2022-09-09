@@ -5,6 +5,11 @@ GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby
 C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
 Code, Compile, Run and Debug online from anywhere in world.
 
+
+Exercício Avaliativo
+Aluna: Suellen Miranda Amorim
+Professor: Cássio Capucho
+
 *******************************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
