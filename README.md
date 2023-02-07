@@ -2,7 +2,7 @@
 ## Suellen Miranda Amorim
 
 
-Git hub - https://github.com/SuellenMiranda/Em-C
+Git hub
 
 Exercícios e Trabalhos
 Prof: Erlon Pinheiro e Cássio Capucho
